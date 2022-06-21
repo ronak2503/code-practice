@@ -32,13 +32,11 @@ int binary(int arr[], int size, int element)
             high = mid - 1;
         }
     }
-    return -1;  
-    
+    return -1;      
 }
-
 int main()
 {
-    int arr[5];
+    int arr[5],ch,a;
     printf("Enter the number :: ");
     for (int i = 0; i < 5; i++)
     {
@@ -47,8 +45,21 @@ int main()
     int element;
     printf("find element :: ");
     scanf("%d", &element);
-    int a = binary(arr, 5, element);
-    printf("the element %d the index %d", element, a);
-
+    printf("\n1. linear search\n2. binary search\n");
+    scanf("%d",&ch);
+    switch (ch)
+    {
+    case 1:
+        a = linear(arr, 5, element);
+        printf("the element %d the index %d", element, a);    
+        break;
+    case 2:
+        a = binary(arr, 5, element);
+        printf("the element %d the index %d", element, a);
+        break;
+    default:
+        printf("wrong key");
+        break;
+    }
     return 0;
 }
