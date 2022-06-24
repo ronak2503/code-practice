@@ -71,8 +71,8 @@ void peek(struct stack *ptr)
         printf("| INDEX | ELEMENT |\n");
         for (int j = 0; j <= ptr->top; j++)
         {
-            printf("-----------\n");
-            printf("| %d | %d |\n", j, ptr->arr[j]);
+            printf("--------------------\n");
+            printf("|   %d    |    %d   |\n", j, ptr->arr[j]);
         }
     }
 }
