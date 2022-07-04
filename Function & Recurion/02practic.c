@@ -9,9 +9,8 @@ int add(int a, int b)
 int sub(int a, int b)
 {
     int result;
-
     result = a - b;
-    result = -(result);
+    result=-result;
     return result;
 }
 int div(int a, int b)
