@@ -6,11 +6,13 @@ struct myArrya
     int used_size;
     int *ptr;
 };
-void creatArrya(struct myArrya *a, int tSize, int uSize)
+void creatArrya(struct myArrya *a)
 {
-    a->total_size = tSize;
-    a->used_size = uSize;
-    a->ptr = (int *)malloc(tSize * sizeof(int));
+    printf("enter the total size ::");
+    scanf("%d",&a->total_size);
+    printf("\nenter the used size ::");
+    scanf("%d",&a->used_size);
+    a->ptr = (int *)malloc(a->total_size * sizeof(int));
 }
 void show(struct myArrya *a)
 {
@@ -22,7 +24,7 @@ void show(struct myArrya *a)
 void setval(struct myArrya *a)
 {
     int n;
-    printf("Enter the element\no");
+    printf("Enter the element\n");
     for (int i = 0; i < a->used_size; i++)
     {
         scanf("%d", &n);
@@ -32,7 +34,7 @@ void setval(struct myArrya *a)
 int main()
 {
     struct myArrya marks;
-    creatArrya(&marks, 10, 2);
+    creatArrya(&marks);
     setval(&marks);
     show(&marks);
     return 0;

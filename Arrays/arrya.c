@@ -58,7 +58,7 @@
 //     }
 //     a[0]=temp;
 // }
-// void rotaten(int a[5],int n)
+// void rotaten(int a[5],int n) 
 // {
 //     while (n--)
 //     {
@@ -88,42 +88,41 @@
 //     }
 //     return 0;
 // }
+#include <stdio.h>
+void sorting(int n[5])
+{
+    int temp, j;
+    for (int i = 1; i < 5; i++)
+    {
+        temp = n[i];
+        for (j = i - 1; j >= 0; j--)
+        {
+            if (n[j] > temp)
+            {
+                n[j + 1] = n[j];
+            }
+            else
+            {
+                break;
+            }
+        }
+        n[j + 1] = temp;
+    }
+}   
 
-// #include <stdio.h>
-// void sorting(int n[5])
-// {
-//     int temp, j;
-//     for (int i = 1; i < 5; i++)
-//     {
-//         temp = n[i];
-//         for (j = i - 1; j >= 0; j--)
-//         {
-//             if (n[j] > temp)
-//             {
-//                 n[j + 1] = n[j];
-//             }
-//             else
-//             {
-//                 break;
-//             }
-//         }
-//         n[j + 1] = temp;
-//     }
-// }
-// int main()
-// {
-//     int n[5];
-//     printf("enter the number\n\n");
-//     for (int i = 0; i < 5; i++)
-//     {
-//         scanf("%d", &n[i]);
-//     }
-    
-//     sorting(n);
-//     printf("\nthe sorting arrya\n\n");
-//     for (int i = 0; i < 5; i++)
-//     {
-//         printf("%d\t", n[i]);
-//     }
-//     return 0;
-// }
+int main()
+{
+    int n[5];
+    printf("enter the number ::");
+    for (int i = 0; i < 5; i++)
+    {
+        scanf("%d", &n[i]);
+    }
+    sorting(n);
+    printf("\nthe sorting arrya\n\n");
+    for (int i = 0; i < 5; i++)
+    {
+        printf("%d\t", n[i]);
+    }
+    return 0;
+}

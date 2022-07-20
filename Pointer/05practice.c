@@ -5,7 +5,7 @@ int main()
     int i;
     int *ptr; 
     int **ptr_ptr;
-    printf("enter the value\n ");
+    printf("enter the value\n");
     scanf("%d", &i);
     ptr = &i;
     ptr_ptr = &ptr;

@@ -1,6 +1,5 @@
 #include<stdio.h>
 
-void printadd(int a);
 int main()
 {
     int i=5;

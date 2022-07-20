@@ -158,11 +158,11 @@ int main()
     node5->next = NULL;
     printf("linked list before insertion\n");
     linkedlist_traversal(node1);
-    linkedlist_sarching(node1, 11);
+    // linkedlist_sarching(node1, 11);
     // node1 = insertatfirst(node1, 30);
     // node1 = insertatindex(node1, 9 ,3);
     // node1 = insertatend(node1,8);
-    // node1 = insertafter(node1, node2, 0 );
+    node1 = insertafter(node2, node3, 0 );
     // node1 = deletionfirst(node1);
     // node1 = deletionindex(node1, 1);
     // // node1 = deletionend(node1);
@@ -170,6 +170,6 @@ int main()
     // printf("befor");
     // printf("\n");
     // printf("linked list afer insertion\n");
-    // linkedlist_traversal(node1);
+    linkedlist_traversal(node1);
     return 0;
 }

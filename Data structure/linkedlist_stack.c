@@ -75,10 +75,10 @@ void peek()
     else
     {
         int i=1;
-        printf("| INDEX | DATA |\n");
+        printf("| LINKEDLIST STACK|\n");
         while (ptr!=NULL)
         {
-            printf("|  %d  |  %d  |\n",i,ptr->data);
+            printf("| %d |->",ptr->data);
             ptr = ptr->next;
             i++;
         }
